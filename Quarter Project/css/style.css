@@ -1,0 +1,68 @@
+nav{
+	border-bottom:1px solid black;
+	width:100%;
+	margin:auto;
+	display:flex;
+	align-items:center;
+	z-index:2;
+	position:relative;
+	background:white;
+}
+
+nav ul{
+	float:right;
+	right:10px;
+	list-style-type:none;
+}
+
+nav ul li{
+	display:inline-block;
+	padding:10px 25px;
+}
+
+nav ul li a{
+	float:right;
+	text-decoration:none;
+	font-size:20px;
+	padding: 10px 22px;
+}
+
+.home{
+	width:100%;
+	margin:0px;
+	padding:0px;
+	border:0px;
+	justify-content:center;
+}
+
+.tiktok h1{
+	text-align:center;
+	font-family:cursive;
+	font-size:50px;
+	position: relative;
+}
+
+.tiktok p{
+	font-family:cursive;
+}
+
+nav ul li a:link{
+	color:green;
+}
+
+nav ul li a:hover{
+	color:red;
+}
+
+nav ul li a:active{
+	color:black;
+}
+
+nav ul li a:visited{
+	color:orange;
+}
+
+.cs{
+text-align: center;
+}
+
