@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Numerology</title>
+		<!-- provide the necessary meta tags -->
+        <style>
+		
+				body {background: cyan; 
+            	text-align: center;
+            	font-family: arial;
+                color: black;
+            }
+            button {padding: 10px; background:white }
+            span {font-size: 1em; color: blue}
+			
+        </style>
+
+	</head>
+	
+<body>
+
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="name"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2> 
+    <button onclick="showFortune()"> Click here to enter your name </button>
+	
+ <script>
+ 
+ 	function showFortune() {
+	
+		const name = prompt("Enter your full name:");
+		document.getElementById("name").textContent = name;
+		let sum = 0;
+		for(let i=0; i<name.length; i++) {
+			sum += parseInt(name[i], 36) - 9;
+		}
+		while(sum > 9) {
+			let temp = sum;
+			sum = 0;
+			while(temp > 0) {
+			
+				sum += temp % 10;
+				temp = Math.floor(temp / 10);
+				
+			}
+			
+		}
+		
+		let fortune;
+		switch(sum) {
+		
+			case 0:
+			
+				fortune = "Today will bring new opportunities.";
+				break;
+				
+			case 1:
+			
+				fortune = "You will receive good news today.";
+				break;
+			case 2:
+				fortune = "Be open to new experiences today.";
+				break;
+				
+			case 3:
+			
+				fortune = "Your creativity will be heightened today.";
+				break;
+				
+			case 4:
+			
+				fortune = "Today is a good day for financial investments.";
+				break;
+				
+			case 5:
+			
+				fortune = "Your social circle will expand today.";
+				break;
+				
+			case 6:
+			
+				fortune = "Today is a good day for romance.";
+				break;
+				
+			case 7:
+			
+				fortune = "Your hard work will pay off today.";
+				break;
+				
+			case 8:
+			
+				fortune = "Today is a good day for travel.";
+				break;
+				
+			case 9:
+			
+				fortune = "You will find inner peace today.";
+				break;
+				
+		}
+		document.getElementById("fortune").textContent = fortune;
+		
+	}
+</script>
+
+   
+    
+</body>
+</html>
